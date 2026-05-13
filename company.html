@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="company.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">My portfolio</div>
+        <div class="navlink">
+            <a href="new .html">Home</a>
+            <a href="About.html">About</a>
+            <a href="project.html">Project's</a>
+            <a href="company.html"> Contact</a>
+        </div>
+    </div>
+
+    <div class="contact ">
+        <h1>Contact me</h1>
+    </div>
+
+    <div id="feedback" class="feedback"></div>
+    <form action="" id="contactForm">
+        <div class="form" id="form">
+            <input type="text" id="name" placeholder="enter your name">
+            <br>
+            <input type="email" placeholder="enter your email " id="email">
+            <br>
+            <textarea id="message" placeholder="Your Message" rows="4"></textarea>
+        </div>
+
+        <div class="btn-wrap">
+            <button id="send" type="submit">send</button>
+        </div>
+
+    </form>
+    <div class="footer">© 2026 My portfolio.</div>
+
+    <script>
+        const NAME = document.getElementById('name');
+        const EMAIL = document.getElementById('email');
+        const MESSAGE = document.getElementById('message');
+        const FORM = document.getElementById('contactForm');
+        const FEEDBACK = document.getElementById('feedback');
+
+        function showMessage(text, type) {
+            FEEDBACK.textContent = text;
+            FEEDBACK.className = 'msg ' + type;
+
+            setTimeout(() => {
+                FEEDBACK.textContent = '';
+                FEEDBACK.className = 'msg';
+            }, 3000);
+        }
+
+        FORM.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const nameValue = NAME.value.trim();
+            const emailValue = EMAIL.value.trim();
+            const messageValue = MESSAGE.value.trim();
+
+            if (!nameValue || !emailValue || !messageValue) {
+                showMessage("Please fill the form", "error");
+                return;
+            }
+
+            if (!emailValue.includes('@')) {
+                showMessage("Enter a valid email", "error");
+                return;
+            }
+
+            localStorage.setItem('name', nameValue);
+            localStorage.setItem('email', emailValue);
+            localStorage.setItem('message', messageValue);
+
+            showMessage("Message sent successfully!", "success");
+
+            FORM.reset();
+        });
+
+    </script>
+</body>
+
+</html>

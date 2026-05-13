@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    /* background-color: #0a0a0a; */
+    color: #fff;
+    font-family: Arial, sans-serif;
+    background-color: #0f172a;
+    /* line-height: 1.6; */
+}
+
+.nav {
+    display: flex;
+    background-color: #0b48d885;
+    justify-content: space-between;
+    padding: 15px 40px;
+    /* position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100; */
+    /* position: relative; */
+    align-items: center;
+
+
+}
+
+.logo {
+    color: #00d4ff;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.navlink {
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    padding: 20px;
+    /* background: #0f172a; */
+}
+
+.navlink.active {
+display: flex;
+
+}
+.navlink a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 1.5s;
+}
+
+.navlink a:hover {
+    color: #fff;
+}
+
+.hh {
+    display: flex;
+    /* margin-top: 80px; */
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #0f172a, #1e293b)
+}
+
+.hh h1{
+    font-size: 55px;
+}
+
+.hh p{
+    font-size: 20px;
+}
+
+.hh button{
+    /* text-decoration: none; */
+    /* background-color: #0f172a; */
+}
+
+
+.btn{
+     display: fle;
+            margin-top: 10px;
+            padding: 12px 20px;
+            background: #38bdf8;
+            /* color: #000; */
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+}
+.ab {
+    display: block;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* @media (max-width:900px) {
+    .ab {
+        display: block;
+    }
+    
+
+    .navlink {
+        display: none;
+    }
+} */
+
+
+@media (max-width: 767px) {
+  .ab { 
+    display: block;          /* show hamburger on mobile */
+  }
+  
+  .navlink { 
+    display: none;           /* hide nav by default on mobile */
+    flex-direction: column;  /* stack links vertically */
+    gap: 15px;               
+    padding: 20px;            
+    background: #1a1a2e;      
+    position: absolute;       
+    top: 60px;               
+    right: 0;
+    width: 200px;
+  }
+}
+
+
+.developer {
+    color: #00d4ff;
+}

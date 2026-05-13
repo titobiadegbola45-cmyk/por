@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my portfolio</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+
+<body>
+    <div class="nav">
+        <div class="logo">My portfolio</div>
+        <div class="ab" onclick="toggleMenu()">☰</div>
+        <div class="navlink">
+            <a href="new .html">Home</a>
+            <a href="About.html">About</a>
+            <a href="project.html">Project's</a>
+            <a href="company.html"> Contact</a>
+        </div>
+    </div>
+
+    <div class="hh">
+        <h1> Hello, <span class="developer">i'm A Developer</span> </h1>
+        <p>Frontend Developer | Designer | Creator</p>
+        <button class="btn"><a href='project.html'>View Work</a></button>
+    </div>
+
+    <script>
+        // document.querySelector(".ab").addEventListener("click," () 
+        // =>{
+
+        //     document.querySelector(".navlink").classList.toggle('active');
+        // } )
+
+        //  function toggleMenu() { 
+
+        //     document.getElementById('nav').classList.toggle('show') 
+        //  }
+        function toggleMenu() {
+            document.querySelector('.navlink').classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
